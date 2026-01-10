@@ -1,0 +1,53 @@
+/* bouncing dots loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loader span {
+  width: 8px;
+  height: 8px;
+  background-color: #1f2937; /* gray-800 */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+/* ===== Custom Swiper ===== */
+
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+
+
+
