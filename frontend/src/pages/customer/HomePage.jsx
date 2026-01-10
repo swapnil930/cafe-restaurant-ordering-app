@@ -18,13 +18,13 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
- useEffect(() => {
-  if (!user) {
-    setIsModalOpen(true);
-  } else {
-    setIsModalOpen(false);
-  }
-}, [user]); 
+  useEffect(() => {
+    if (!user) {
+      setIsModalOpen(true);
+    } else {
+      setIsModalOpen(false);
+    }
+  }, [user]);
 
   useEffect(() => {
     setIsLoading(true)
@@ -83,30 +83,34 @@ export default function HomePage() {
       </div>
 
       <div className="container mx-auto px-4 py-6">
-        <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl shadow-lg px-6 py-6 text-white">
+        <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl shadow-lg text-white overflow-hidden">
 
-          <div className="flex items-center justify-between">
-            <div className="w-1/3">
-              <h3 className="text-2xl font-bold mb-2">Today’s Special 🔥</h3>
-              <p className="text-orange-100 mb-4">
-                Get Upto 60% off on all burgers!
-              </p>
-
-              <button
-                onClick={() => handleCategoryClick("Burgers")}
-                className="bg-white text-orange-600 px-6 py-2 rounded-full font-semibold hover:bg-orange-50 transition"
-              >
-                Order Now
-              </button>
-            </div>
-
-            <div className=" flex-1 w-56 h-64 rounded-xl overflow-hidden flex-shrink-0">
-              <ImageSwiper />
-            </div>
-
+          {/* Poster / Banner */}
+          <div className="w-full h-48 sm:h-56 md:h-64 rounded-t-2xl overflow-hidden">
+            <ImageSwiper />
           </div>
+
+          {/* Content */}
+          <div className="flex flex-col items-center text-center px-6 py-6">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+              Today’s Special 🔥
+            </h3>
+
+            <p className="text-orange-100 mb-4 text-sm sm:text-base">
+              Get Upto 60% off on all burgers!
+            </p>
+
+            <button
+              onClick={() => handleCategoryClick("Burgers")}
+              className="bg-white text-orange-600 px-6 py-2 rounded-full font-semibold hover:bg-orange-50 transition"
+            >
+              Order Now
+            </button>
+          </div>
+
         </div>
       </div>
+
 
 
       <Modal
