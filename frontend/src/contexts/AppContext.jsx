@@ -6,14 +6,14 @@ export const AppProvider = ({ children }) => {
 
   // -------- USER --------
   const [user, setUser] = useState(() => {
-    const u = localStorage.getItem('user');
-    return u ? JSON.parse(u) : null;
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
   });
 
   // -------- CART --------
   const [cart, setCart] = useState(() => {
-    const c = localStorage.getItem('cart');
-    return c ? JSON.parse(c) : [];
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
   });
 
   // -------- ORDERS --------
@@ -21,7 +21,11 @@ export const AppProvider = ({ children }) => {
 
   // Persist user
   useEffect(() => {
-    localStorage.setItem('user', JSON.stringify(user));
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('user');
+    }
   }, [user]);
 
   // Persist cart

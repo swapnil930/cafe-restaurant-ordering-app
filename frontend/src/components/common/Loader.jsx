@@ -5,7 +5,6 @@ export default function Loader({ text = 'Loading...' }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-xl px-8 py-6 flex flex-col items-center gap-4 animate-scale-in">
 
-        {/* Icon */}
         <div className="relative">
           <div className="absolute inset-0 bg-orange-400 rounded-full blur-xl opacity-40 animate-pulse"></div>
 
@@ -15,13 +14,11 @@ export default function Loader({ text = 'Loading...' }) {
           </div>
         </div>
 
-        {/* Text */}
         <p className="text-gray-700 font-semibold text-sm">
           {text}
         </p>
       </div>
 
-      {/* Animations */}
       <style>{`
         @keyframes bounce-slow {
           0%, 100% { transform: translateY(0); }

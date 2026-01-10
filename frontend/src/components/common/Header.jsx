@@ -1,8 +1,9 @@
-import {UserCircle, Utensils } from 'lucide-react';
+import { Utensils } from 'lucide-react';
 import { useState } from 'react';
 import { useApp } from '../../contexts/AppContext';
 import { Link } from 'react-router-dom';
 import LoginPage from '../../pages/customer/Loginpage';
+import ProfileButton from './ProfileButton';
 
 const Header = () => {
   const [showModel, setShowModel] = useState(false);
@@ -56,16 +57,7 @@ const Header = () => {
                   </span>
                 </button>
 
-                <button to='profile'
-                  className="flex items-center justify-center p-1"
-                  onClick={() => setShowModel(true)}
-                >
-                  <UserCircle className="w-6 h-6  text-gray-700
-                  hover:border-orange-500 hover:bg-orange-50 hover:text-orange-600
-                  transition-all duration-200
-                  cursor-pointer shadow-sm rounded-full" />
-
-                </button>
+                <ProfileButton />
               </div>
             </div>
           </div>

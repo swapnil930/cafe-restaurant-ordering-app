@@ -18,12 +18,13 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-
-  useEffect(() => {
-    if (!user) {
-      setIsModalOpen(true)
-    }
-  }, [user]);
+ useEffect(() => {
+  if (!user) {
+    setIsModalOpen(true);
+  } else {
+    setIsModalOpen(false);
+  }
+}, [user]); 
 
   useEffect(() => {
     setIsLoading(true)
@@ -85,8 +86,6 @@ export default function HomePage() {
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl shadow-lg px-6 py-6 text-white">
 
           <div className="flex items-center justify-between">
-
-            {/* LEFT TEXT */}
             <div className="w-1/3">
               <h3 className="text-2xl font-bold mb-2">Today’s Special 🔥</h3>
               <p className="text-orange-100 mb-4">
@@ -101,7 +100,6 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* RIGHT IMAGE / SWIPER */}
             <div className=" flex-1 w-56 h-64 rounded-xl overflow-hidden flex-shrink-0">
               <ImageSwiper />
             </div>

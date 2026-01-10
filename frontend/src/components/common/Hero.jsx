@@ -1,12 +1,10 @@
 import React from "react";
-import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
 
     return (
         <section className="relative p-4 flex items-center justify-center px-4 overflow-hidden z-0">
-
             {/* 🎥 Background Video */}
             <video
                 className="absolute inset-0 w-full h-full object-cover -z-10"
@@ -20,12 +18,9 @@ const Hero = () => {
                 <source src="/videos/background_video.mp4" type="video/mp4" />
             </video>
 
-            {/* 🔲 Dark Overlay */}
             <div className="absolute inset-0 bg-black/60 -z-10" />
-
-            {/* ⭐ Content */}
+            
             <div className="relative z-10 flex flex-col items-center gap-12 text-white text-center">               
-                {/* Main Text */}
                 <div className="max-w-xl flex flex-col gap-4">
                     <h3 className="text-2hexl md:text-4xl font-semibold leading-tight">
                         Crafted to perfection, one brew at a time.

@@ -2,7 +2,7 @@
   import axios from "axios";
 
 export class OrderServices {
-  static serverURL = 'http://localhost:8080';
+  static serverURL = 'https://cafe-restaurant-ordering-app.onrender.com';
 
   static getAllOrders() {
     let dataURL = `${this.serverURL}/order`; 

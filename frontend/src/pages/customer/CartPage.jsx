@@ -101,12 +101,10 @@ export default function CartPage() {
             >
               <div className="p-4">
                 <div className="flex gap-4">
-                  {/* Item Image Placeholder */}
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-200 to-orange-300 rounded-xl flex items-center justify-center flex-shrink-0">
                     <img src={item?.image} alt="" />
                   </div>
 
-                  {/* Item Details */}
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-start gap-2">
                       <div className="flex-1">
@@ -121,7 +119,6 @@ export default function CartPage() {
                       </button>
                     </div>
 
-                    {/* Quantity Controls */}
                     <div className="flex items-center gap-3 mt-3">
                       <div className="flex items-center gap-2 bg-orange-50 rounded-full p-1">
                         <button

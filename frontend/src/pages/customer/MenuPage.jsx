@@ -73,8 +73,6 @@ export default function MenuPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-100">
       <Header />
-
-      {/* Welcome */}
       <div className="container mx-auto px-4 py-4">
         <div className="inline-flex items-cente px-3 py-1 text-sm">
           <span
